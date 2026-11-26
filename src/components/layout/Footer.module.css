@@ -39,10 +39,27 @@
   text-underline-offset: 4px;
 }
 
+/* Studio credit: its own full-width line, below the note and signature. */
+.credit {
+  flex-basis: 100%;
+  margin-top: 24px;
+}
+
+.creditLink {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
 @media (min-width: 768px) {
   .footer {
     gap: 16px;
     padding: 40px var(--gutter) 40px;
+  }
+
+  .credit {
+    margin-top: 36px;
   }
 
   .room {

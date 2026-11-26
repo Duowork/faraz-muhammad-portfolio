@@ -6,7 +6,8 @@ import { cx } from '@/lib/cx';
 import styles from './Footer.module.css';
 
 /**
- * Site footer: a note on the left, logo and © year on the right.
+ * Site footer: a note on the left, logo and © year on the right, and the studio credit
+ * ("Crafted by Duowork") on its own line below (last on mobile).
  *
  * Variants follow the boards:
  * - "default"   bookings email (Home, Work)
@@ -36,6 +37,12 @@ export default function Footer({ variant = 'default', note }) {
           {site.name}
         </TransitionLink>
         <span>© {new Date().getFullYear()}</span>
+      </p>
+      <p className={cx('label', styles.credit)}>
+        {site.credit.label}{' '}
+        <ExternalLink href={site.credit.url} className={styles.creditLink}>
+          {site.credit.name}
+        </ExternalLink>
       </p>
     </footer>
   );

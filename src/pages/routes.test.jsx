@@ -67,6 +67,18 @@ describe('routes', () => {
     expect(headerLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
+  it.each(['/', '/art', '/blog', '/nowhere'])(
+    'credits Duowork in the footer on %s',
+    async (path) => {
+      renderRoute(path);
+      const footer = await screen.findByRole('contentinfo');
+      expect(footer).toHaveTextContent('Crafted by Duowork');
+      const credit = within(footer).getByRole('link', { name: /Duowork/ });
+      expect(credit).toHaveAttribute('href', 'https://duowork.tech/');
+      expect(credit).toHaveAttribute('target', '_blank');
+    },
+  );
+
   it('keeps placeholders visible and unlinked until filled', async () => {
     renderRoute('/contact');
     expect(await screen.findByText('[EMAIL]')).not.toHaveAttribute('href');
