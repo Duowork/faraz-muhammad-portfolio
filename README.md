@@ -99,8 +99,8 @@ Until it is set, the forms validate and then show "Sending messages is not set u
 
 ### Where the build deliberately differs from the boards
 
-- **Home**: the portrait stays sticky through About and the Work teaser (HANDOFF §3: "sticky until the Gallery section"), so on tablet and desktop the Work teaser sits in the left column.
-- **Art room, tablet**: the wall is two columns, per HANDOFF §3. The tablet board shows three.
+- **Home**: the portrait stays sticky through About and the Work teaser (the handoff notes say "sticky until the Gallery section"), so on tablet and desktop the Work teaser sits in the left column.
+- **Art room, tablet**: the wall is two columns, as the handoff notes ask. The tablet board shows three.
 - **Wall frames**: the hover label reads "View ↗" in both rooms, because frames open the viewer. The Art board said "Instagram ↗". Instagram is linked from the viewer.
 - **Work page, mobile**: all projects are listed (the board showed six of nine).
 
@@ -114,6 +114,15 @@ The code is arranged so a port is mostly mechanical:
 - `TransitionLink`, `RootLayout` (scroll and focus handling) and the `react-router` hooks (`useParams`, `useNavigate`, `useLocation`) are the only router-specific pieces. Components that use hooks need `'use client'`.
 - Content JSON, CSS Modules, tokens and the `@/` import alias work unchanged. Fontsource imports can move to `next/font`.
 
-## Design reference
+## Still needed from the client
 
-The design handoff (boards, tokens, notes) lives in `faraz-site-handoff/` and is git-ignored. Read `HANDOFF.md` §6 there for the list of content still needed from the client.
+These show on the site as bracketed placeholders (see [Editing content](#editing-content)):
+
+- Real titles, year, medium and dimensions for each art work. Captions, photographer and styling for each look.
+- The Instagram post URL for every gallery image.
+- Work page: brands walked and year for Taipei, Seoul and Paris Fashion Weeks. Real brands, campaigns and editorials with images (currently grey placeholder blocks).
+- Bookings and partnerships email, and press email.
+- The comp card / press kit PDF.
+- Confirmation of the handle spelling "sixhunred" (possibly a typo of "sixhundred").
+- Confirmation of the art alt text, which is a first draft.
+- Optional: photos for the home Wear and Art door tiles beyond the current hero images.

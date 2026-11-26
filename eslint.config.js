@@ -7,7 +7,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 
 export default defineConfig([
-  globalIgnores(['dist', 'coverage', 'public/images', 'faraz-site-handoff']),
+  globalIgnores(['dist', 'coverage', 'public/images']),
   {
     files: ['**/*.{js,jsx,mjs}'],
     extends: [
