@@ -1,3 +1,5 @@
+![Faraz Muhammad. Zaria · Nigeria. Fashion & multidisciplinary creative, born in Zaria.](docs/readme-cover.png)
+
 # Faraz Muhammad: portfolio and gallery
 
 Portfolio site for Faraz Muhammad (@sixhunred), a fashion and multidisciplinary creative from Zaria, Nigeria. It has a home page, a Work page, two gallery rooms (Wear and Art) with deep-linkable viewers, a Blog reading list, a Contact page and a custom 404.
