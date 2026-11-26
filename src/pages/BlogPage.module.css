@@ -1,0 +1,58 @@
+/* Hairlines on this page run inside the gutters, so the gutter sits on the wrapper. */
+.page {
+  padding-inline: var(--gutter);
+}
+
+.intro {
+  padding: 48px 0 24px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 0.95;
+}
+
+.lede {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--color-grey);
+}
+
+.more {
+  padding: 48px 0 56px;
+}
+
+.moreLabel {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    padding-bottom: 48px;
+  }
+
+  .title {
+    font-size: clamp(72px, 9vw, 128px);
+  }
+
+  .lede {
+    margin-top: 32px;
+  }
+
+  .more {
+    padding: 80px 0 96px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    padding-bottom: 56px;
+  }
+}

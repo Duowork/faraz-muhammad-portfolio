@@ -1,6 +1,7 @@
 import RootLayout from '@/components/layout/RootLayout';
 import ArtPiecePage from '@/pages/ArtPiecePage';
 import ArtRoomPage from '@/pages/ArtRoomPage';
+import BlogPage from '@/pages/BlogPage';
 import ContactPage from '@/pages/ContactPage';
 import HomePage from '@/pages/HomePage';
 import NotFoundPage from '@/pages/NotFoundPage';
@@ -27,6 +28,7 @@ export const routes = [
       { path: 'wear/:slug', Component: WearLookPage },
       { path: 'art', Component: ArtRoomPage },
       { path: 'art/:slug', Component: ArtPiecePage },
+      { path: 'blog', Component: BlogPage },
       { path: 'contact', Component: ContactPage },
       { path: '*', Component: NotFoundPage },
     ],

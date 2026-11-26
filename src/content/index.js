@@ -7,6 +7,7 @@
  * `null` URLs fall back to the Instagram profile.
  */
 import artData from './art.json';
+import blogData from './blog.json';
 import siteData from './site.json';
 import wearData from './wear.json';
 import workData from './work.json';
@@ -50,6 +51,12 @@ import workData from './work.json';
 
 export const site = siteData;
 export const work = workData;
+
+/**
+ * Blog reading list. Posts link out to Medium / Substack; the site does not host them.
+ * @type {{ intro: string, platforms: import('@/lib/blog').Platforms, posts: import('@/lib/blog').Post[] }}
+ */
+export const blog = blogData;
 
 /** @type {Room} */
 export const artRoom = artData.room;

@@ -1,0 +1,213 @@
+/* ---------- featured post ---------- */
+
+.featured {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.featuredLink {
+  display: block;
+}
+
+.cover {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-cover-placeholder);
+}
+
+.coverImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featuredText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+.featuredBody {
+  margin-top: 24px;
+}
+
+.featuredTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 1.05;
+}
+
+.excerpt {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--color-grey);
+}
+
+.cta {
+  margin-top: 32px;
+}
+
+/* ---------- post rows ---------- */
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-line);
+}
+
+.item {
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* Mobile: date on its own line, then the title, then platform and "Read ↗" on one line. */
+.row {
+  display: block;
+  padding: 24px 0;
+}
+
+.date {
+  display: block;
+  font-size: var(--fs-small);
+  color: var(--color-grey);
+}
+
+.title {
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.loadMore {
+  margin-top: 40px;
+}
+
+/* ---------- hover: title slides 10px, arrow 6px ---------- */
+
+/* Block links keep ink text on hover (the global link hover greys text). */
+.featuredLink:hover,
+.row:hover {
+  color: var(--color-ink);
+}
+
+.slide,
+.arrow {
+  transition: transform var(--dur-slide) var(--ease);
+}
+
+.arrow {
+  display: inline-block;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .featuredLink:hover .slide,
+  .featuredLink:focus-visible .slide,
+  .row:hover .slide,
+  .row:focus-visible .slide {
+    transform: translateX(10px);
+  }
+
+  .featuredLink:hover .arrow,
+  .featuredLink:focus-visible .arrow,
+  .row:hover .arrow,
+  .row:focus-visible .arrow {
+    transform: translateX(6px);
+  }
+}
+
+/* ---------- tablet ---------- */
+
+@media (min-width: 768px) {
+  .featured {
+    padding: 40px 0;
+  }
+
+  .featuredText {
+    margin-top: 40px;
+  }
+
+  .featuredBody {
+    margin-top: 28px;
+  }
+
+  .featuredTitle {
+    font-size: 44px;
+  }
+
+  .excerpt {
+    margin-top: 20px;
+  }
+
+  .row {
+    display: flex;
+    align-items: baseline;
+    gap: 32px;
+    padding: 28px 0;
+  }
+
+  .date {
+    flex: 0 0 112px;
+  }
+
+  .title {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    font-size: 36px;
+  }
+
+  .meta {
+    flex: 0 0 auto;
+    gap: 32px;
+    margin: 0;
+  }
+
+  .platform {
+    width: 92px;
+  }
+}
+
+/* ---------- desktop: cover beside the text ---------- */
+
+@media (min-width: 1200px) {
+  .featuredLink {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    column-gap: 40px;
+  }
+
+  /* Label at the top, title and excerpt in the middle, "Read on …" at the bottom. */
+  .featuredText {
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 0;
+  }
+
+  .featuredBody {
+    margin-top: 0;
+  }
+
+  .featuredTitle {
+    font-size: 56px;
+  }
+
+  .cta {
+    margin-top: 0;
+  }
+}

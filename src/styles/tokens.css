@@ -19,6 +19,7 @@
   --color-stage-art: #ffffff; /* viewer stage behind contained artworks */
   --color-stage-wear: #f0f0ec; /* viewer stage behind cropped looks */
   --color-placeholder: #eeeeee; /* behind images while they load */
+  --color-cover-placeholder: var(--color-door-art); /* blog cover not supplied yet */
 
   /* type */
   --font-display: 'Instrument Serif', serif;
@@ -43,6 +44,7 @@
   --dur-viewer: 350ms;
   --dur-room: 500ms;
   --dur-reveal: 450ms;
+  --dur-slide: 350ms; /* blog: title and arrow slide on hover */
   --ease: ease;
 }
 

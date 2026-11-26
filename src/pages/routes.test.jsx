@@ -9,6 +9,7 @@ describe('routes', () => {
     ['/work', 'Work', 'Work — Faraz Muhammad'],
     ['/wear', 'Wear', 'Wear — Faraz Muhammad'],
     ['/art', 'Art', 'Art — Faraz Muhammad'],
+    ['/blog', 'Blog', 'Blog — Faraz Muhammad'],
     ['/contact', 'Contact', 'Contact — Faraz Muhammad'],
   ])('%s renders its page and title', async (path, heading, title) => {
     renderRoute(path);

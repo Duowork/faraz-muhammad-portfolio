@@ -1,0 +1,54 @@
+{
+  "intro": "Essays and notes by Faraz. Each piece opens on its home platform.",
+  "platforms": {
+    "medium": {
+      "label": "Medium",
+      "profileUrl": "https://medium.com/"
+    },
+    "substack": {
+      "label": "Substack",
+      "profileUrl": "https://substack.com/"
+    }
+  },
+  "posts": [
+    {
+      "title": "[FEATURED POST TITLE]",
+      "date": "[DATE]",
+      "platform": "medium",
+      "url": "https://medium.com/",
+      "featured": true,
+      "excerpt": "[EXCERPT: one or two lines from the piece.]",
+      "cover": null
+    },
+    {
+      "title": "[POST TITLE]",
+      "date": "[DATE]",
+      "platform": "medium",
+      "url": "https://medium.com/"
+    },
+    {
+      "title": "[POST TITLE]",
+      "date": "[DATE]",
+      "platform": "substack",
+      "url": "https://substack.com/"
+    },
+    {
+      "title": "[POST TITLE]",
+      "date": "[DATE]",
+      "platform": "medium",
+      "url": "https://medium.com/"
+    },
+    {
+      "title": "[POST TITLE]",
+      "date": "[DATE]",
+      "platform": "substack",
+      "url": "https://substack.com/"
+    },
+    {
+      "title": "[POST TITLE]",
+      "date": "[DATE]",
+      "platform": "medium",
+      "url": "https://medium.com/"
+    }
+  ]
+}

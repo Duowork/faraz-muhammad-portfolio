@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { label: 'About', to: { pathname: '/', hash: '#about' }, sections: [] },
   { label: 'Work', to: '/work', sections: ['/work'] },
   { label: 'Gallery', to: '/art', sections: ['/art', '/wear'] },
+  { label: 'Blog', to: '/blog', sections: ['/blog'] },
   { label: 'Contact', to: '/contact', sections: ['/contact'] },
 ];
 

@@ -1,6 +1,6 @@
 # Faraz Muhammad: portfolio and gallery
 
-Portfolio site for Faraz Muhammad (@sixhunred), a fashion and multidisciplinary creative from Zaria, Nigeria. It has a home page, a Work page, two gallery rooms (Wear and Art) with deep-linkable viewers, a Contact page and a custom 404.
+Portfolio site for Faraz Muhammad (@sixhunred), a fashion and multidisciplinary creative from Zaria, Nigeria. It has a home page, a Work page, two gallery rooms (Wear and Art) with deep-linkable viewers, a Blog reading list, a Contact page and a custom 404.
 
 Built with Vite and React 19 (JavaScript), React Router 7, and CSS Modules over design tokens.
 
@@ -39,7 +39,7 @@ src/
     gallery/           Room heading, frames, wall/pillar/floor parts
     viewer/            Viewer layout, stage, controls, thumbnails, navigation hook
     forms/             Fields, shared message form, Inquiry and Contact forms
-    home/, work/       Page-specific pieces
+    home/, work/, blog/ Page-specific pieces
     ui/                Picture, links, band, arrow
   hooks/               usePageTitle, useReveal, useSwipe, useViewerKeys
   lib/                 Pure helpers (forms, images, placeholders, viewer maths, transitions)
@@ -47,7 +47,7 @@ src/
   routes.js            Route table (shared by the app and the tests)
 ```
 
-Routes: `/`, `/work`, `/wear`, `/wear/look-i` to `look-vii`, `/art`, `/art/untitled-i` to `untitled-xiii`, `/contact`. Any other path, including unknown work slugs, shows the 404 page.
+Routes: `/`, `/work`, `/wear`, `/wear/look-i` to `look-vii`, `/art`, `/art/untitled-i` to `untitled-xiii`, `/blog`, `/contact`. Any other path, including unknown work slugs, shows the 404 page.
 
 ## Editing content
 
@@ -62,10 +62,33 @@ All copy and gallery data live in `src/content/*.json`. Values in square bracket
 | Instagram post per work                   | `instagramUrl` on each work or look (`null` falls back to the profile)                  |
 | Fashion weeks (brands walked, year)       | `work.json` → `fashionWeeks[]`                                                          |
 | Brands, campaigns, editorials             | `work.json` → `projects[]` (`image: null` shows a grey placeholder)                     |
+| Blog posts, platforms and profile links   | `blog.json` (see below)                                                                 |
 
 Order in `works[]` and `looks[]` is the viewer order. The first entry is the room's featured work. Keep each `slug` stable, because URLs depend on it.
 
 **Adding or replacing an image:** put the full-size JPEG in `assets-src/images/`, run `npm run images`, then reference it by file name without the extension (e.g. `"image": "art14"`). The script writes AVIF and WebP at 160–1600px plus a JPEG fallback, and records the intrinsic size so pages don't shift while loading. Write alt text that describes the work. Decorative images use `""`.
+
+### Blog posts
+
+The Blog is a curated reading list: every post opens on Medium or Substack in a new tab, and the site does not host articles. Each entry in `blog.json` → `posts[]` has:
+
+```json
+{
+  "title": "On walking in Paris",
+  "date": "2026-03-14",
+  "platform": "medium",
+  "url": "https://medium.com/@handle/on-walking-in-paris",
+  "featured": true,
+  "excerpt": "One or two lines from the piece (featured post only).",
+  "cover": { "image": "blog-paris", "alt": "Describe the cover image" }
+}
+```
+
+- `date` is `YYYY-MM-DD` and displays as "14 Mar 2026". Posts are listed newest first.
+- The first post with `featured: true` is featured. Without one, the newest post is.
+- `cover` (featured only) names an image in `assets-src/images` (4:3 works best). `null` shows the grey "[COVER IMAGE]" block.
+- `platform` must be a key of `platforms`. `platforms` also drives the "Writing · on …" label and the "Follow the writing." buttons, so remove Substack (or Medium) there if Faraz only uses one.
+- "More writing" shows 10 posts, then a "Load more" button.
 
 ## Forms
 
@@ -127,3 +150,4 @@ These show on the site as bracketed placeholders (see [Editing content](#editing
 - Confirmation of the handle spelling "sixhunred" (possibly a typo of "sixhundred").
 - Confirmation of the art alt text, which is a first draft.
 - Optional: photos for the home Wear and Art door tiles beyond the current hero images.
+- Blog: whether Faraz publishes on Medium, Substack or both, and his profile URLs (the buttons link to medium.com and substack.com for now). The posts to list, with title, date and URL, plus an excerpt and cover for the featured one. Whether to add a Medium/Substack filter above the list.
