@@ -15,16 +15,17 @@ npm install
 npm run dev        # http://localhost:5173 (generates responsive images on first run)
 ```
 
-| Script            | What it does                                                              |
-| ----------------- | ------------------------------------------------------------------------- |
-| `npm run dev`     | Dev server. Runs `images` first.                                          |
-| `npm run build`   | Production build into `dist/`. Runs `images` first.                       |
-| `npm run preview` | Serves the production build locally.                                      |
-| `npm run images`  | Builds AVIF/WebP/JPEG sizes from `assets-src/images` (incremental).       |
-| `npm run icons`   | Regenerates the "FM" favicon set in `public/` (committed; rarely needed). |
-| `npm test`        | Runs the Vitest suite once (`npm run test:watch` to watch).               |
-| `npm run lint`    | ESLint, including React hooks and accessibility (jsx-a11y) rules.         |
-| `npm run format`  | Prettier.                                                                 |
+| Script            | What it does                                                                |
+| ----------------- | --------------------------------------------------------------------------- |
+| `npm run dev`     | Dev server. Runs `images` first.                                            |
+| `npm run build`   | Production build into `dist/`. Runs `images` first.                         |
+| `npm run preview` | Serves the production build locally.                                        |
+| `npm run deploy`  | Builds and publishes `dist/` to GitHub Pages (see [Deploying](#deploying)). |
+| `npm run images`  | Builds AVIF/WebP/JPEG sizes from `assets-src/images` (incremental).         |
+| `npm run icons`   | Regenerates the "FM" favicon set in `public/` (committed; rarely needed).   |
+| `npm test`        | Runs the Vitest suite once (`npm run test:watch` to watch).                 |
+| `npm run lint`    | ESLint, including React hooks and accessibility (jsx-a11y) rules.           |
+| `npm run format`  | Prettier.                                                                   |
 
 ## Project structure
 
@@ -106,14 +107,38 @@ Until it is set, the forms validate and then show "Sending messages is not set u
 
 `.env` holds documented, non-secret defaults. Override them in `.env.local` (git-ignored) or on the host. Every `VITE_` value is public in the browser bundle.
 
-| Variable             | Purpose                                                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `VITE_SITE_URL`      | Absolute site URL with no trailing slash. Makes the Open Graph image URL absolute (needed by most share previews). |
-| `VITE_FORM_ENDPOINT` | Form delivery endpoint (see above).                                                                                |
+| Variable             | Purpose                                                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BASE_PATH`          | Sub-path the site is served from, e.g. `/<repo>/` for a GitHub Pages project site. Empty for a domain root. Build-time only.                |
+| `VITE_SITE_URL`      | Absolute site URL (including any sub-path) with no trailing slash. Makes the Open Graph image URL absolute (needed by most share previews). |
+| `VITE_FORM_ENDPOINT` | Form delivery endpoint (see above).                                                                                                         |
 
 ## Deploying
 
-`npm run build` produces a static site in `dist/`. Because routing happens in the browser, the host must serve `index.html` for unknown paths (an "SPA fallback" or rewrite of `/*` to `/index.html`). Otherwise deep links like `/art/untitled-iv` will 404 on refresh. Set `VITE_SITE_URL` and `VITE_FORM_ENDPOINT` in the host's build environment. The build needs `sharp`, which installs prebuilt binaries on common CI images.
+`npm run build` produces a static site in `dist/`. The build needs `sharp`, which installs prebuilt binaries on common CI images.
+
+### GitHub Pages
+
+`npm run deploy` builds the site, adds the deep-link fallback, and pushes `dist/` to the `gh-pages` branch of the `origin` remote (using the [`gh-pages`](https://github.com/tschaub/gh-pages) package). The build runs on your machine, so the settings it needs must be in `.env.local`:
+
+```bash
+# Project site at https://<user>.github.io/<repo>/
+BASE_PATH=/<repo>/
+VITE_SITE_URL=https://<user>.github.io/<repo>
+VITE_FORM_ENDPOINT=https://formspree.io/f/xxxxxxx
+```
+
+1. Push the repo to GitHub (`git remote add origin …`, then push `main`).
+2. Run `npm run deploy`.
+3. In the repo's **Settings → Pages**, set the source to **Deploy from a branch**, branch `gh-pages`, folder `/ (root)`.
+
+For a custom domain, leave `BASE_PATH` empty, set `VITE_SITE_URL` to the domain, and add `--cname example.com` to the `deploy` script (it writes the `CNAME` file GitHub needs).
+
+GitHub Pages cannot rewrite paths to `index.html`, so the deploy copies it to `404.html`, which Pages serves for any unknown path. Deep links like `/art/untitled-iv` then open and refresh correctly, but the server answers them with HTTP status 404. Visitors don't notice. Search engines and some link-preview bots treat those pages as missing, though, so only the home page is reliably indexed. A host with real rewrites (Netlify, Vercel, Cloudflare Pages: rewrite `/*` to `/index.html` with status 200), or the Next.js port, avoids this.
+
+### Other hosts
+
+Serve `dist/` and configure the SPA fallback (rewrite unknown paths to `/index.html`), otherwise deep links 404 on refresh. Set `VITE_SITE_URL` and `VITE_FORM_ENDPOINT` (and `BASE_PATH` if serving from a sub-path) in the host's build environment.
 
 ## Behaviour notes
 

@@ -5,6 +5,7 @@ import PageShell from '@/components/layout/PageShell';
 import EmailLink from '@/components/ui/EmailLink';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cx } from '@/lib/cx';
+import { withBase } from '@/lib/paths';
 import styles from './ContactPage.module.css';
 
 const DOWNLOAD_LABEL = 'Download comp card & press kit (PDF)';
@@ -21,7 +22,7 @@ function CompCardLink() {
     );
   }
   return (
-    <a href={site.compCardUrl} className={className} download>
+    <a href={withBase(site.compCardUrl)} className={className} download>
       {DOWNLOAD_LABEL}
     </a>
   );
