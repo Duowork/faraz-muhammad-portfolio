@@ -80,10 +80,22 @@
 /* ---------- tablet ---------- */
 
 @media (min-width: 768px) {
+  /* The first screen below the header. The portrait and the name block are both centred in
+     it, so their middles line up. When the screen is shorter than the portrait, both fall
+     back to the portrait's height. */
   .intro {
+    --portrait-height: 520px;
+    --first-screen: calc(100vh - var(--header-height));
+
     flex-direction: row;
     gap: 32px;
     padding: 0 var(--gutter);
+  }
+
+  @supports (height: 100svh) {
+    .intro {
+      --first-screen: calc(100svh - var(--header-height));
+    }
   }
 
   .copy {
@@ -100,22 +112,21 @@
     padding: 0;
   }
 
-  /* Vertically centred in the first screen, then sticky. */
+  /* Vertically centred in the first screen, then sticky (centred in the viewport). */
   .portrait {
     position: sticky;
-    top: max(24px, calc(50vh - 260px));
-    height: 520px;
-    margin-top: max(0px, calc((100vh - var(--header-height) - 520px) / 2));
+    top: max(24px, calc((100vh - var(--portrait-height)) / 2));
+    height: var(--portrait-height);
+    margin-top: max(0px, calc((var(--first-screen) - var(--portrait-height)) / 2));
   }
 
-  /* Header + hero fill the first screen. */
+  /* Header + hero fill the first screen; the name block sits level with the portrait. */
   .hero {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-height: calc(100vh - var(--header-height));
-    min-height: calc(100svh - var(--header-height));
-    padding: 40px 0 96px;
+    justify-content: center;
+    min-height: max(var(--first-screen), var(--portrait-height));
+    padding: 40px 0;
   }
 
   .location {
@@ -164,6 +175,8 @@
 
 @media (min-width: 1200px) {
   .intro {
+    --portrait-height: 640px;
+
     gap: 56px;
   }
 
@@ -173,12 +186,6 @@
 
   .portraitColumn {
     flex-basis: 480px;
-  }
-
-  .portrait {
-    top: max(24px, calc(50vh - 320px));
-    height: 640px;
-    margin-top: max(0px, calc((100vh - var(--header-height) - 640px) / 2));
   }
 
   .title {

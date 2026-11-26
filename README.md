@@ -100,6 +100,7 @@ Until it is set, the forms validate and then show "Sending messages is not set u
 ### Where the build deliberately differs from the boards
 
 - **Home**: the portrait stays sticky through About and the Work teaser (the handoff notes say "sticky until the Gallery section"), so on tablet and desktop the Work teaser sits in the left column.
+- **Home hero**: on tablet and desktop the location, name and tagline are vertically centred level with the portrait. The board aligned them to the bottom of the first screen.
 - **Art room, tablet**: the wall is two columns, as the handoff notes ask. The tablet board shows three.
 - **Wall frames**: the hover label reads "View ↗" in both rooms, because frames open the viewer. The Art board said "Instagram ↗". Instagram is linked from the viewer.
 - **Work page, mobile**: all projects are listed (the board showed six of nine).
