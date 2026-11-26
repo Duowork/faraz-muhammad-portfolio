@@ -1,0 +1,142 @@
+{
+  "room": {
+    "number": "Room 02",
+    "title": "Art",
+    "path": "/art",
+    "tagline": "Illustration and photography.",
+    "doorImage": "art-hero-piece",
+    "note": "Every work links to its original post on Instagram. Price on request."
+  },
+  "works": [
+    {
+      "slug": "untitled-i",
+      "title": "untitled i",
+      "image": "art-hero-piece",
+      "alt": "Illustration of an egg carton with numbered eggs and hens",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-ii",
+      "title": "untitled ii",
+      "image": "art3",
+      "alt": "Illustration of a figure lying on a red rectangle",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-iii",
+      "title": "untitled iii",
+      "image": "art4",
+      "alt": "Illustration of a figure lying across coloured blocks",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-iv",
+      "title": "untitled iv",
+      "image": "art5",
+      "alt": "Illustration of a figure lying in red on a dark floor",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-v",
+      "title": "untitled v",
+      "image": "art2",
+      "alt": "Illustration of a seated group with blank white faces",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-vi",
+      "title": "untitled vi",
+      "image": "art6",
+      "alt": "Illustration of black silhouettes on orange and red",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-vii",
+      "title": "untitled vii",
+      "image": "art7",
+      "alt": "Illustration of a man on a camel among silhouettes",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-viii",
+      "title": "untitled viii",
+      "image": "art8",
+      "alt": "Illustration of a radio on a red ground",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-ix",
+      "title": "untitled ix",
+      "image": "art9",
+      "alt": "White line drawing of a weapon and a crutch on dark green",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-x",
+      "title": "untitled x",
+      "image": "art10",
+      "alt": "Illustration of a hand holding a blade",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-xi",
+      "title": "untitled xi",
+      "image": "art11",
+      "alt": "White line portrait on magenta",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-xii",
+      "title": "untitled xii",
+      "image": "art12",
+      "alt": "Illustration of the Kaaba above a crowd pattern",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "untitled-xiii",
+      "title": "untitled xiii",
+      "image": "art1",
+      "alt": "Bouquet with a sunflower, held in a hand",
+      "year": "[YEAR]",
+      "medium": "[MEDIUM]",
+      "dimensions": "[DIMENSIONS]",
+      "instagramUrl": null
+    }
+  ]
+}

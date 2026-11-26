@@ -1,0 +1,98 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.formNote {
+  font-size: var(--fs-small);
+  color: var(--color-grey);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: var(--label-size);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-grey);
+}
+
+.control {
+  width: 100%;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-ink);
+  border-radius: 0;
+  background: transparent;
+  font-size: 16px;
+  color: var(--color-ink);
+  resize: none;
+}
+
+select.control {
+  appearance: none;
+  padding-right: 28px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23111' stroke-width='1.2'/%3E%3C/svg%3E")
+    right 4px center / 12px 8px no-repeat;
+}
+
+.control[aria-invalid='true'] {
+  border-bottom-width: 2px;
+}
+
+.error,
+.formError {
+  font-size: var(--fs-small);
+  color: var(--color-ink);
+}
+
+.error::before {
+  content: '— ';
+}
+
+.submit {
+  align-self: flex-start;
+  border: 0;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* Off-screen, never focusable; only bots fill it. */
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.thanksTitle {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.thanksText {
+  font-size: 15px;
+  color: var(--color-grey);
+}

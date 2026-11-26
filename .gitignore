@@ -1,0 +1,25 @@
+# Design handoff (reference only, kept out of the repo)
+faraz-site-handoff
+
+# Dependencies
+node_modules
+
+# Build output
+dist
+coverage
+
+# Generated responsive images (rebuilt by `npm run images`)
+public/images
+
+# Local env overrides
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea

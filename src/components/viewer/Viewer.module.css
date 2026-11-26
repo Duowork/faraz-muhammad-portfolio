@@ -1,0 +1,222 @@
+.viewer {
+  min-height: 100vh;
+  background: var(--color-white);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 28px var(--gutter);
+}
+
+.counter {
+  font-size: var(--label-size);
+  letter-spacing: var(--label-tracking);
+  color: var(--color-grey);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mobile/tablet: stage, then panel. Desktop: side by side. */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 8px var(--gutter) 56px;
+}
+
+.stageColumn,
+.panel {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+/* ---------- stage ---------- */
+
+.frame {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 12px;
+  background: var(--color-white);
+  border: var(--frame-border);
+}
+
+.stage {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-stage-art);
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.stage[data-variant='wear'] {
+  background: var(--color-stage-wear);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity var(--dur-viewer) var(--ease);
+  -webkit-user-drag: none;
+}
+
+.stage[data-variant='wear'] .image {
+  object-fit: cover;
+}
+
+.current {
+  opacity: 1;
+}
+
+/* A work mounted as the current one fades in rather than popping. */
+@starting-style {
+  .current {
+    opacity: 0;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  max-width: 640px;
+  margin: 20px auto 0;
+}
+
+/* ---------- thumbnails ---------- */
+
+.thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thumbsUnderStage {
+  max-width: 640px;
+  margin: 32px auto 0;
+}
+
+.thumb {
+  display: block;
+  width: 56px;
+  height: 70px;
+  padding: 3px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line-soft);
+  transition: border-color var(--dur-hover) var(--ease);
+}
+
+.thumbs[data-variant='wear'] .thumb {
+  height: 72px;
+}
+
+.thumb[aria-current='true'] {
+  border: 2px solid var(--color-ink);
+}
+
+@media (hover: hover) {
+  .thumb:hover {
+    border-color: var(--color-ink);
+  }
+}
+
+.thumbImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* ---------- info panel ---------- */
+
+.eyebrow {
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 44px;
+  line-height: 1;
+}
+
+.meta {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+.caption {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.section {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-line);
+  scroll-margin-top: 24px;
+}
+
+.sectionLabel {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .main {
+    gap: 40px;
+    padding: 24px var(--gutter) 96px;
+  }
+
+  .frame {
+    padding: 40px;
+  }
+
+  /* Tablet: the panel lines up with the 640px stage column. */
+  .panel {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+
+  .section {
+    margin-top: 56px;
+    padding-top: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    flex-wrap: nowrap;
+    gap: 72px;
+  }
+
+  .stageColumn {
+    flex: 1 1 560px;
+  }
+
+  .panel {
+    flex: 0 1 400px;
+    margin: 0;
+  }
+}

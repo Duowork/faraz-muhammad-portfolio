@@ -1,0 +1,119 @@
+.intro {
+  padding: 24px var(--gutter) 40px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 0.95;
+}
+
+/* Two paths: stacked below desktop, side by side from 1200px. */
+.paths {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-line);
+}
+
+.path {
+  padding: 36px var(--gutter);
+}
+
+.path:first-child {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.pathLabel {
+  margin-bottom: 20px;
+}
+
+.pathTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 1.05;
+}
+
+.pathText {
+  max-width: 420px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.pathEmail {
+  margin-top: 28px;
+  font-size: 16px;
+}
+
+.download {
+  margin-top: 28px;
+}
+
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 48px var(--gutter);
+  border-top: 1px solid var(--color-line);
+}
+
+.noteTitle {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.form {
+  flex: 1 1 100%;
+  min-width: 0;
+  max-width: 640px;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    padding: 48px var(--gutter) 64px;
+  }
+
+  .title {
+    font-size: clamp(72px, 9vw, 128px);
+  }
+
+  .path {
+    padding: 48px var(--gutter);
+  }
+
+  .pathTitle {
+    font-size: 48px;
+  }
+
+  .note {
+    gap: 48px;
+    padding: 72px var(--gutter);
+  }
+
+  .noteTitle {
+    flex-basis: 240px;
+  }
+
+  .form {
+    flex-basis: 480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .paths {
+    flex-direction: row;
+  }
+
+  .path {
+    flex: 1 1 480px;
+    min-width: 0;
+  }
+
+  .path:first-child {
+    border-bottom: 0;
+    border-right: 1px solid var(--color-line);
+  }
+}

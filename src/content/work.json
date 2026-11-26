@@ -1,0 +1,117 @@
+{
+  "intro": "What Faraz has made with and for other people: runways, campaigns and editorials.",
+  "teaser": "Runways, campaigns and editorials with fashion brands and creative teams.",
+  "fashionWeeks": [
+    {
+      "name": "Taipei Fashion Week",
+      "brands": "[BRANDS WALKED]",
+      "year": "[YEAR]",
+      "url": null
+    },
+    {
+      "name": "Seoul Fashion Week",
+      "brands": "[BRANDS WALKED]",
+      "year": "[YEAR]",
+      "url": null
+    },
+    {
+      "name": "Paris Fashion Week",
+      "brands": "[BRANDS WALKED]",
+      "year": "[YEAR]",
+      "url": null
+    }
+  ],
+  "projectTypes": ["Runway", "Campaign", "Editorial"],
+  "projects": [
+    {
+      "id": "project-1",
+      "brand": "[BRAND]",
+      "type": "Runway",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    },
+    {
+      "id": "project-2",
+      "brand": "[BRAND]",
+      "type": "Campaign",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    },
+    {
+      "id": "project-3",
+      "brand": "[BRAND]",
+      "type": "Editorial",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    },
+    {
+      "id": "project-4",
+      "brand": "[BRAND]",
+      "type": "Runway",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    },
+    {
+      "id": "project-5",
+      "brand": "[BRAND]",
+      "type": "Campaign",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    },
+    {
+      "id": "project-6",
+      "brand": "[BRAND]",
+      "type": "Editorial",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    },
+    {
+      "id": "project-7",
+      "brand": "[BRAND]",
+      "type": "Runway",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    },
+    {
+      "id": "project-8",
+      "brand": "[BRAND]",
+      "type": "Campaign",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    },
+    {
+      "id": "project-9",
+      "brand": "[BRAND]",
+      "type": "Editorial",
+      "season": "[CAMPAIGN / SEASON]",
+      "year": "[YEAR]",
+      "image": null,
+      "alt": "",
+      "url": null
+    }
+  ]
+}

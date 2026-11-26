@@ -1,0 +1,153 @@
+.intro {
+  padding: 32px var(--gutter) 40px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  font-size: 72px;
+  line-height: 0.95;
+}
+
+.lede {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.section {
+  padding: 0 var(--gutter) 56px;
+}
+
+.sectionLabel {
+  margin-bottom: 16px;
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.projectsHead {
+  margin-bottom: 28px;
+}
+
+.projectsTitle {
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.05;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 10px 16px;
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+  font-size: 11px;
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  transition:
+    background-color var(--dur-hover) var(--ease),
+    color var(--dur-hover) var(--ease);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Neighbouring cards dim while one is hovered or focused. */
+@media (hover: hover) {
+  .grid:hover > li > a,
+  .grid:has(a:focus-visible) > li > a:not(:focus-visible) {
+    opacity: 0.45;
+  }
+
+  .grid:hover > li > a:hover {
+    opacity: 1;
+  }
+}
+
+.empty {
+  font-size: 15px;
+  color: var(--color-grey);
+}
+
+@media (min-width: 768px) {
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 48px var(--gutter) 72px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: clamp(72px, 9vw, 128px);
+  }
+
+  .lede {
+    max-width: 360px;
+  }
+
+  .section {
+    padding-bottom: 96px;
+  }
+
+  .sectionLabel {
+    margin-bottom: 20px;
+  }
+
+  .projectsHead {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .projectsTitle {
+    margin: 0;
+    font-size: 36px;
+  }
+
+  .chip {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .grid {
+    gap: 48px 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projectsTitle {
+    font-size: 44px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 56px 24px;
+  }
+}

@@ -1,0 +1,106 @@
+.frame {
+  display: block;
+  transition: opacity var(--dur-link) var(--ease);
+}
+
+.mat {
+  padding: var(--frame-mat);
+  background: var(--color-white);
+  border: var(--frame-border);
+}
+
+.window {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--color-placeholder);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Artworks hang whole on white; looks are cropped to the frame. */
+.frame[data-room='art'][data-variant='wall'] .window {
+  background: var(--color-white);
+}
+
+.frame[data-room='art'][data-variant='wall'] .image {
+  object-fit: contain;
+}
+
+.frame[data-room='wear'][data-variant='wall'] .window {
+  aspect-ratio: 3 / 4;
+}
+
+.frame[data-variant='feature'] .mat {
+  padding: 16px;
+}
+
+.frame[data-room='wear'][data-variant='feature'] .window {
+  aspect-ratio: auto;
+  height: 400px;
+  background: #161616;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--color-grey);
+}
+
+.frame[data-variant='feature'] .caption {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.title {
+  transition: color var(--dur-hover) var(--ease);
+}
+
+/* "View ↗" fades in on hover; touch screens never show it. */
+.more {
+  display: none;
+  color: var(--color-ink);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--dur-hover) var(--ease);
+}
+
+@media (hover: hover) {
+  .more {
+    display: inline;
+  }
+
+  .frame:hover .more,
+  .frame:focus-visible .more {
+    opacity: 1;
+  }
+
+  .frame:hover .title {
+    color: var(--color-ink);
+  }
+}
+
+@media (min-width: 768px) {
+  .frame[data-room='art'][data-variant='feature'] .mat {
+    padding: 24px;
+  }
+
+  .frame[data-room='wear'][data-variant='feature'] .mat {
+    padding: 28px;
+  }
+
+  .frame[data-room='wear'][data-variant='feature'] .window {
+    height: 700px;
+  }
+
+  .frame[data-variant='feature'] .caption {
+    margin-top: 14px;
+  }
+}

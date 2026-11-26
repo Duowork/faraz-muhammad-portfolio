@@ -1,0 +1,60 @@
+/* Faraz Muhammad: design tokens. Single source of truth for colour, type, layout and motion.
+   Values come from the design handoff (tokens/tokens.css). Media queries cannot read custom
+   properties, so the breakpoints are repeated as literals: tablet 768px, desktop 1200px. */
+:root {
+  /* colour */
+  --color-ground: #f5f5f3; /* page background */
+  --color-ink: #111111; /* text, borders, primary buttons */
+  --color-grey: #5a5a55; /* secondary text, labels */
+  --color-line: #cfcfca; /* section hairlines */
+  --color-line-soft: #dcdcd7; /* frame borders */
+  --color-white: #ffffff; /* frames, viewer, inputs on white */
+  --color-floor: #d9d7d1; /* gallery floor band */
+  --color-floor-edge: #c9c7c1;
+  --color-track: #d6d6d1; /* track-light bar */
+  --color-track-lamp: #bdbdb8;
+  --color-pillar-edge: #e3e3df;
+  --color-door-wear: #111111; /* door overlay colours */
+  --color-door-art: #e6e5e1;
+  --color-stage-art: #ffffff; /* viewer stage behind contained artworks */
+  --color-stage-wear: #f0f0ec; /* viewer stage behind cropped looks */
+  --color-placeholder: #eeeeee; /* behind images while they load */
+
+  /* type */
+  --font-display: 'Instrument Serif', serif;
+  --font-body: 'Inter', sans-serif;
+  --label-size: 12px;
+  --label-tracking: 0.14em;
+  --fs-logo: 30px;
+  --fs-logo-footer: 26px;
+  --fs-body: 16px;
+  --fs-small: 13px;
+
+  /* layout */
+  --gutter: 20px; /* 20 mobile / 40 tablet / 56 desktop */
+  --header-height: 86px; /* tablet+ header: 28 + 30 + 28 */
+  --frame-border: 1px solid var(--color-line-soft);
+  --frame-mat: 10px;
+
+  /* motion */
+  --dur-link: 300ms;
+  --dur-hover: 250ms;
+  --dur-door: 600ms;
+  --dur-viewer: 350ms;
+  --dur-room: 500ms;
+  --dur-reveal: 450ms;
+  --ease: ease;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --gutter: 56px;
+    --fs-logo-footer: 28px;
+  }
+}

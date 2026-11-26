@@ -1,0 +1,89 @@
+{
+  "room": {
+    "number": "Room 01",
+    "title": "Wear",
+    "path": "/wear",
+    "tagline": "Streetwear, worn.",
+    "doorImage": "wear-hero-piece",
+    "note": "Every look links to its original post on Instagram."
+  },
+  "looks": [
+    {
+      "slug": "look-i",
+      "title": "look i",
+      "image": "wear-hero-piece",
+      "alt": "Look i: long black coat and hoodie in a boutique, mirror photo",
+      "year": "[YEAR]",
+      "photographer": "[PHOTOGRAPHER]",
+      "styling": "[STYLING]",
+      "caption": "[CAPTION — a line or two about this look]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "look-ii",
+      "title": "look ii",
+      "image": "wear1",
+      "alt": "Look ii: graphic sweatshirt and black trousers",
+      "year": "[YEAR]",
+      "photographer": "[PHOTOGRAPHER]",
+      "styling": "[STYLING]",
+      "caption": "[CAPTION — a line or two about this look]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "look-iii",
+      "title": "look iii",
+      "image": "wear2",
+      "alt": "Look iii: white varsity hoodie and camo trousers in the street",
+      "year": "[YEAR]",
+      "photographer": "[PHOTOGRAPHER]",
+      "styling": "[STYLING]",
+      "caption": "[CAPTION — a line or two about this look]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "look-iv",
+      "title": "look iv",
+      "image": "wear3",
+      "alt": "Look iv: long black coat and hoodie by garden steps",
+      "year": "[YEAR]",
+      "photographer": "[PHOTOGRAPHER]",
+      "styling": "[STYLING]",
+      "caption": "[CAPTION — a line or two about this look]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "look-v",
+      "title": "look v",
+      "image": "wear4",
+      "alt": "Look v: all-black outfit, mirror photo in a store",
+      "year": "[YEAR]",
+      "photographer": "[PHOTOGRAPHER]",
+      "styling": "[STYLING]",
+      "caption": "[CAPTION — a line or two about this look]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "look-vi",
+      "title": "look vi",
+      "image": "wear5",
+      "alt": "Look vi: cream raglan tee and black trousers before graffiti shutters",
+      "year": "[YEAR]",
+      "photographer": "[PHOTOGRAPHER]",
+      "styling": "[STYLING]",
+      "caption": "[CAPTION — a line or two about this look]",
+      "instagramUrl": null
+    },
+    {
+      "slug": "look-vii",
+      "title": "look vii",
+      "image": "wear6",
+      "alt": "Look vii: white graphic tee and camouflage cargo trousers",
+      "year": "[YEAR]",
+      "photographer": "[PHOTOGRAPHER]",
+      "styling": "[STYLING]",
+      "caption": "[CAPTION — a line or two about this look]",
+      "instagramUrl": null
+    }
+  ]
+}

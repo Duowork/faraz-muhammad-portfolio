@@ -1,0 +1,74 @@
+/* Mobile: logo above wrapped links. Tablet+: logo left, links right. */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px var(--gutter) 12px;
+}
+
+.logo {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-size: var(--fs-logo);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Underline draws in from the left on hover. */
+.link {
+  display: inline-block;
+  padding: 8px 0;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition:
+    background-size var(--dur-link) var(--ease),
+    color var(--dur-hover) var(--ease);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    background-size: 100% 1px;
+  }
+}
+
+.current {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px var(--gutter);
+  }
+
+  .logo {
+    align-self: auto;
+  }
+
+  .nav {
+    gap: 24px;
+  }
+
+  .link {
+    padding: 0 0 3px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    gap: 32px;
+  }
+}

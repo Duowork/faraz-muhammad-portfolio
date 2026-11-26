@@ -1,0 +1,239 @@
+{
+  "art-hero-piece": {
+    "width": 2736,
+    "height": 3440,
+    "widths": [
+      160,
+      400,
+      800,
+      1200,
+      1600
+    ],
+    "fallback": 800
+  },
+  "art1": {
+    "width": 1080,
+    "height": 1350,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art10": {
+    "width": 1080,
+    "height": 1418,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art11": {
+    "width": 1080,
+    "height": 1418,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art12": {
+    "width": 1080,
+    "height": 1418,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art2": {
+    "width": 2864,
+    "height": 3616,
+    "widths": [
+      160,
+      400,
+      800,
+      1200,
+      1600
+    ],
+    "fallback": 800
+  },
+  "art3": {
+    "width": 1080,
+    "height": 1364,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art4": {
+    "width": 1080,
+    "height": 1364,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art5": {
+    "width": 2856,
+    "height": 3608,
+    "widths": [
+      160,
+      400,
+      800,
+      1200,
+      1600
+    ],
+    "fallback": 800
+  },
+  "art6": {
+    "width": 1080,
+    "height": 1416,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art7": {
+    "width": 1080,
+    "height": 1416,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art8": {
+    "width": 1080,
+    "height": 1418,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "art9": {
+    "width": 1080,
+    "height": 1418,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "home-portrait": {
+    "width": 1440,
+    "height": 1794,
+    "widths": [
+      160,
+      400,
+      800,
+      1200,
+      1440
+    ],
+    "fallback": 800
+  },
+  "wear-hero-piece": {
+    "width": 1440,
+    "height": 1800,
+    "widths": [
+      160,
+      400,
+      800,
+      1200,
+      1440
+    ],
+    "fallback": 800
+  },
+  "wear1": {
+    "width": 1080,
+    "height": 1440,
+    "widths": [
+      160,
+      400,
+      800,
+      1080
+    ],
+    "fallback": 800
+  },
+  "wear2": {
+    "width": 1004,
+    "height": 1338,
+    "widths": [
+      160,
+      400,
+      800,
+      1004
+    ],
+    "fallback": 800
+  },
+  "wear3": {
+    "width": 720,
+    "height": 960,
+    "widths": [
+      160,
+      400,
+      720
+    ],
+    "fallback": 720
+  },
+  "wear4": {
+    "width": 1440,
+    "height": 1920,
+    "widths": [
+      160,
+      400,
+      800,
+      1200,
+      1440
+    ],
+    "fallback": 800
+  },
+  "wear5": {
+    "width": 1178,
+    "height": 1566,
+    "widths": [
+      160,
+      400,
+      800,
+      1178
+    ],
+    "fallback": 800
+  },
+  "wear6": {
+    "width": 1440,
+    "height": 1800,
+    "widths": [
+      160,
+      400,
+      800,
+      1200,
+      1440
+    ],
+    "fallback": 800
+  }
+}

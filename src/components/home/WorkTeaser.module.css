@@ -1,0 +1,86 @@
+.teaser {
+  padding: 56px var(--gutter);
+  border-top: 1px solid var(--color-line);
+}
+
+.cta {
+  display: block;
+}
+
+.eyebrow {
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 1;
+}
+
+.lede {
+  max-width: 520px;
+  margin: 16px 0 32px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.rowName {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.rowYear {
+  font-size: var(--fs-small);
+  color: var(--color-grey);
+}
+
+.go {
+  display: inline-block;
+  margin-top: 28px;
+  transition: transform 400ms var(--ease);
+}
+
+@media (hover: hover) {
+  .cta:hover .go {
+    transform: translateX(8px);
+  }
+}
+
+/* Tablet+: the teaser sits in the left column beside the sticky portrait. */
+@media (min-width: 768px) {
+  .teaser {
+    padding: 96px 0;
+  }
+
+  .title {
+    font-size: 72px;
+  }
+
+  .rowName {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 88px;
+  }
+}
